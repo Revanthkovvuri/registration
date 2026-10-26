@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+    </style>
+    <script>
+        document.getElementById("a").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var number = document.getElementById("number").value;
+
+            
+            if (name === "" || email === "" || number === "") {
+                alert("Please fill in all fields.");
+                return;
+            }
+
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>USER REGISTRATION FORM</h1>
+        <form id="a">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required ><br><br>
+            <label for="email">Email:</label>   
+            <input type="email" id="email" name="email" required ><br><br>   
+            <label for="number">Phone Number:</label>
+            <input type="text" id="number" name="number" required ><br><br>   
+            <label for="number">EVENT</label>
+            <select >
+                <option value="">Select</option>
+                <option value="EVENT1">TECHNICAL FEST</option>
+                <option value="EVENT2">CULTURAL FEST </option>
+                <option value="EVENT3">Other</option>
+            </select><br><br>
+                    
+                </select><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        
+    
+</body>
+</html>
